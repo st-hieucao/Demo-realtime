@@ -14,6 +14,7 @@ export const ConnectSocket = (server) => {
         "https://user.phaata.com",
         "http://localhost:5173",
         "https://65a0e2634bef138e4d3c1038--golden-semifreddo-ce2707.netlify.app/",
+        "https://65a0ee8799c9c194b35d5650--golden-semifreddo-ce2707.netlify.app/",
       ],
       methods: ["GET", "POST"],
       allowedHeaders: ["my-custom-header"],
