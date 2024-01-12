@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import { createServer } from "http";
-import { ConnectSocket } from './Socket';
+import { ConnectSocket } from './Socket.js';
 
 export const connectDb = async () => {
   const url = 'mongodb+srv://CaoKhaHieu:CaoKhaHieu@cluster0.5sfoj.mongodb.net/DemoRealtime?retryWrites=true&w=majority';
