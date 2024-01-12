@@ -13,6 +13,7 @@ export const ConnectSocket = (server) => {
         "https://phaata.com",
         "https://user.phaata.com",
         "http://localhost:5173",
+        "https://65a0e2634bef138e4d3c1038--golden-semifreddo-ce2707.netlify.app/",
       ],
       methods: ["GET", "POST"],
       allowedHeaders: ["my-custom-header"],
