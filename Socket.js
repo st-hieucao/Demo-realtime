@@ -6,16 +6,17 @@ const devices = [];
 export const ConnectSocket = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: [
-        "http://localhost:8080",
-        "https://phaata.info",
-        "https://user.phaata.info",
-        "https://phaata.com",
-        "https://user.phaata.com",
-        "http://localhost:5173",
-        "https://65a0e2634bef138e4d3c1038--golden-semifreddo-ce2707.netlify.app/",
-        "https://65a0ee8799c9c194b35d5650--golden-semifreddo-ce2707.netlify.app/",
-      ],
+      // origin: [
+      //   "http://localhost:8080",
+      //   "https://phaata.info",
+      //   "https://user.phaata.info",
+      //   "https://phaata.com",
+      //   "https://user.phaata.com",
+      //   "http://localhost:5173",
+      //   "https://65a0e2634bef138e4d3c1038--golden-semifreddo-ce2707.netlify.app/",
+      //   "https://65a0ee8799c9c194b35d5650--golden-semifreddo-ce2707.netlify.app/",
+      // ],
+      origin: "*",
       methods: ["GET", "POST"],
       allowedHeaders: ["my-custom-header"],
       credentials: true,
