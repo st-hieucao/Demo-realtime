@@ -1,5 +1,6 @@
 import { Server } from "socket.io";
 import { UAParser } from 'ua-parser-js'
+import { createNewMessage } from "./index.js";
 
 const devices = [];
 
@@ -34,8 +35,12 @@ export const ConnectSocket = (server) => {
         io.emit('total-device', devices.length);
       }
     });
-
     io.emit('total-device', devices.length);
+
+    socket.on('create-message', async (data) => {
+      const newMessage = await createNewMessage(data);
+      io.emit('new-message', newMessage);
+    });
 
     socket.on('disconnect', function(){
       const index = devices.indexOf(parserResults.ua);
